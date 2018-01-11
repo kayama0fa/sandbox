@@ -23,3 +23,36 @@ end
 puts("# --------------------------------------------------------------------------")
 puts("# Chapter02.2 ハッシュ")
 
+# 以下は、シンボルを表現する。要するにシンボルも変数に格納できる
+sym = :foo
+sym2 = :"foo"
+p(sym)
+
+song = {
+  :title => "A",
+  :artist => "B"
+}
+artist = :artist
+print("title:", song[:title], " artist:", song[artist], "\n")
+name = {first: "ka"}
+name[:last] = "yama0fa"
+
+print( name[:first], ".", name[:last], "\n")
+
+puts("song.each")
+song.each do |k,v|
+  print("  #{k},#{v}\n")
+end
+
+puts("# --------------------------------------------------------------------------")
+puts("# Chapter02.3 正規表現")
+
+word = "Ruby"
+if /Ruby/ =~ word then  # 注意：0でもtrue扱い。nilでfalse
+  puts("much /uby/ <-> #{word}")
+else
+  puts("not much")
+end
+p(/Ruby/ =~ word)
+
+# nil: オブジェクトが存在しないことを示す特殊な値。
