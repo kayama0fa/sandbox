@@ -23,7 +23,7 @@ p(RUBY_PLATFORM)
 CONST_X = 1
 CONST_X.freeze
 puts(CONST_X)
-CONST_X = 2                     # 期待に反してエラーも起きずに書き換えられる
+CONST_X = 2                     # 期待に反してエラーも起きずに書き換えられる(警告は出る)
 puts(CONST_X)
 
 puts("# Chapter04.5 予約語")
@@ -44,8 +44,8 @@ a,b=1,2
 b,a=a,b
 # b=1, a=2
 
-# head & tailな使い方はできない・・・
-head,tail = [1,2,3,4]
+# 関数型言語でよくあるhead & tailな使い方
+head,*tail = [1,2,3,4]
 p("head=#{head}") # 1
 p("tail=#{tail}") # 2
 

@@ -8,7 +8,6 @@ puts("# Chapter03.3 メソッドの作成")
 # 引数なし、リターンなしのメソッド
 def hello
   puts("hello from method.")
-
 end
 
 # リターンありのメソッド
